@@ -18,7 +18,7 @@ mat = load(input_file).SDR_data;
 for i = 1:1:num
     im = mat(:,:,:,i);
     imwrite(im, fullfile(save_folder, [num2str(i,'%06d'), '.png']));
-    [num2str(i,'%06d'), '.png']
+    disp[num2str(i,'%06d'), '.png'];
 end
 
 end

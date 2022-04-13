@@ -21,7 +21,7 @@ from models import SR_ITM_base_net
 
 # Global Parameters
 # root directory to data
-root_dir = 'data'
+root_dir = 'dataset/deep-sr-itm/png'
 
 # checkpoint directory
 checkpoint_dir = osp.join('checkpoints', 'base_net')
@@ -56,7 +56,7 @@ max_epochs = 200
 use_cuda = True
 
 # gpu id
-gpu_id = 3
+gpu_id = 0
 
 # if load from the checkpoint 
 load = False
@@ -224,7 +224,7 @@ if __name__ == '__main__':
         print("WARNING: You have a CUDA device, so you should probably run with `use_cuda = True`")
     
     # load data
-    trainset = YouTubeDataset(osp.join(root_dir, 'trainset_SDR'),
+    trainset = YouTubeDataset(osp.join(root_dir, 'trainset_SDR_x2'),
                               osp.join(root_dir, 'trainset_HDR'), 
                               phase='train')
     
