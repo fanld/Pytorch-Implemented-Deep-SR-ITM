@@ -23,7 +23,7 @@ from utils import tensor_to_pil
 
 # Global Parameters
 # testset path
-testset_SDR_dir = "./data/testset_SDR"
+testset_SDR_dir = "./dataset/deep-sr-itm/png/testset_SDR"
 
 # batch size of dataloader
 batch_size = 1
@@ -32,7 +32,7 @@ batch_size = 1
 num_workers = 2
 
 # model path
-model_path = "./checkpoints/full_net/full_net_270.pth" 
+model_path = "./checkpoints/checkpoints/full_net/full_net_270.pth"
 
 # output path: if `None` then results will not be saved
 output_path = "./results"
@@ -52,13 +52,13 @@ scale = 2
 use_cuda = True
 
 # gpu id
-gpu_id = 1
+gpu_id = 0
 
 # validate or not
 validate = True
 
 # if `validate` == True, please specify `testset_HDR_dir`
-testset_HDR_dir = "./data/testset_HDR"
+testset_HDR_dir = "./dataset/deep-sr-itm/png/testset_HDR"
 
 # seeds
 torch_seed = 2020
