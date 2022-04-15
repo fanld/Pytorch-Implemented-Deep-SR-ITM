@@ -70,8 +70,9 @@ class YouTubeDataset(Dataset):
             SDR_img = cv2.resize(SDR_img, (0,0), fx=1.0/self.scale, fy=1.0/self.scale)
         
         # normalize to [0, 1]
-        SDR_img = SDR_img.astype(np.float32)
+        SDR_img = SDR_img.astype(np.float32) #转换数据类型。fanld
         SDR_img = SDR_img / 255.0
+        # 在这里做的guided filter decompositions. by fanld.
         SDR_base = guidedFilter(guide=SDR_img, src=SDR_img, radius=5, eps=0.01)
         
         # transform to torch tensor

@@ -136,7 +136,7 @@ def test(net, testloader, criterions, device):
                
 if __name__ == '__main__':
     # set seed
-    torch.manual_seed(torch_seed)
+    torch.manual_seed(torch_seed)   # why set seed? by fanld
     np.random.seed(numpy_seed)
         
     device = torch.device("cuda:%d" % gpu_id if use_cuda else "cpu")
