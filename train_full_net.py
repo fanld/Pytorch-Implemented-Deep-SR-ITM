@@ -21,7 +21,7 @@ from models import SR_ITM_full_net
 
 # Global Parameters
 # root directory to data
-root_dir = 'data'
+root_dir = 'dataset/deep-sr-itm/png'
 
 # pretrained model directory
 pretrained_model_dir = osp.join('checkpoints', 'base_net')
