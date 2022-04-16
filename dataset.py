@@ -41,7 +41,7 @@ class YouTubeDataset(Dataset):
         if phase == "val" and scale is None:
             raise ValueError("scale must be specified if `phase` == {}"
                             .format(phase))
-        
+        # glob:对文件夹下的所有文件进行遍历。fanld
         N_SDR = len(glob(osp.join(self.SDR_dir,
                                   '*.{}'.format(self.file_type))))
         if self.phase != "test":
